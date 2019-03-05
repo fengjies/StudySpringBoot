@@ -1,0 +1,25 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      labe: master
+      server:
+        git:
+          # 配置git仓库的URL地址
+          uri: https://github.com/hairdryre/Study_SpringCloud
+          # git仓库地址下的文件夹，可以配置多个，用“,”分割。
+          search-paths: config/chapter6
+          #        uri: https://github.com/forezp/SpringcloudConfig/
+          #        searchPaths: respo
+
+          username:
+          password:
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
